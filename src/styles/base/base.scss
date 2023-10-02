@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// base
+
+@import 'config';
+@import 'media';
+@import 'fonts';
+@import 'reset';
+
+// block
+
+@import '../block/nav';
+@import '../block/home_main.scss';
+
+[class*='__container'] {
+	max-width: 1160px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+body {
+	color: $firstTextColor;
+}
+
+.home_page {
+	border-radius: 0px 0px 40px 40px;
+	background: linear-gradient(
+		103deg,
+		#fceed5 6.43%,
+		#fceed5 78.33%,
+		#ffe7ba 104.24%
+	);
+
+	height: 100vh;
+}

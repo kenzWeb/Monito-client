@@ -1,0 +1,15 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: ['./src/**/*.{js,jsx,ts,tsx}'],
+	theme: {
+		colors: {
+			primary_color_dark_blue: '#003459',
+			primary_color_dark_blue_80: '#002A48',
+			neutral_color_60: '#667479',
+		},
+		fontFamily: {
+      Gilroy: ['Gilroy']
+    }
+	},
+	plugins: [],
+}

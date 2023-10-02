@@ -1,0 +1,46 @@
+.main {
+	margin-top: 80px;
+}
+.main__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.main__header {
+	display: flex;
+}
+.main__header-left {
+	display: flex;
+	flex-direction: column;
+}
+.main__header-title {
+	color: $firstTextColor-80;
+	font-family: Gilroy;
+	font-size: 60px;
+	font-weight: 800;
+	line-height: 68px;
+	text-transform: capitalize;
+}
+.main__header-subtitle {
+	color: $firstTextColor-80;
+	font-family: Gilroy;
+	font-size: 46px;
+	font-weight: 700;
+	line-height: 60px;
+	text-transform: capitalize;
+}
+.main__header-description {
+	width: 480px;
+	color: $c80;
+	font-family: Gilroy;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+}
+.main__buttons {
+	display: flex;
+}
+.main__button-view-intro {
+}
+.main__button-explore-now {
+}

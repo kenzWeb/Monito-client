@@ -1,0 +1,297 @@
+// Text
+
+// Heading Text
+
+$Bold46: 46px;
+$Med46: 46px;
+$Reg46: 46px;
+
+$Bold36: 36px;
+$Semi36: 36px;
+$Reg36: 36px;
+
+$Bold28: 28px;
+$Med28: 28px;
+$Reg28: 28px;
+
+$Bold24: 24px;
+$Semi24: 24px;
+$Reg24: 24px;
+
+// Body Text
+
+$Bold20: 20px;
+$Med20: 20px;
+$Reg20: 20px;
+
+$Bold16: 16px;
+$Med16: 16px;
+$Reg16: 16px;
+
+$Bold14: 14px;
+$Med14: 14px;
+$Reg14: 14px;
+
+$Bold12: 12px;
+$Med12: 12px;
+$Reg12: 12px;
+
+$Bold10: 10px;
+$Med10: 10px;
+$Reg10: 10px;
+
+$Bold8: 8px;
+$Semi8: 8px;
+$Reg8: 8px;
+
+// Colors
+
+// State Color
+
+$black: #000000;
+$white: #fff;
+$firstTextColor: #003459;
+$firstTextColor-60: #00528c;
+$firstTextColor-80: #002a48;
+$firstTextColor-40: #0078cd;
+$SecTextColor: #f7dba7;
+$PinkRed: #ff564f;
+$GreenLight: #34c759;
+$OrangeShine: #ff912c;
+$BlueSea: #00a7e7;
+
+// Neutral Color
+
+$c100: #00171f;
+$c80: #242b33;
+$c60: #667479;
+$c40: #99a2a5;
+$c20: #ccd1d2;
+$c10: #ebeeef;
+$c0: #fdfdfd;
+
+// Yellow
+
+$yellow40: #FCEED5;
+$yellow60: #F1D092;
+$yellow80: #EEC77E;
+
+// Background
+
+// Class
+
+/* 46px */
+.Bold46 {
+	font-size: 46px;
+	font-weight: bold;
+}
+
+.Med46 {
+	font-size: 46px;
+	font-weight: medium;
+}
+
+.Reg46 {
+	font-size: 46px;
+	font-weight: normal;
+}
+
+/* 36px */
+.Bold36 {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.Semi36 {
+	font-size: 36px;
+	font-weight: semibold;
+}
+
+.Reg36 {
+	font-size: 36px;
+	font-weight: normal;
+}
+
+/* 28px */
+.Bold28 {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.Med28 {
+	font-size: 28px;
+	font-weight: medium;
+}
+
+.Reg28 {
+	font-size: 28px;
+	font-weight: normal;
+}
+
+/* 24px */
+.Bold24 {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.Semi24 {
+	font-size: 24px;
+	font-weight: semibold;
+}
+
+.Reg24 {
+	font-size: 24px;
+	font-weight: normal;
+}
+
+/* 20px */
+.Bold20 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.Med20 {
+	font-size: 20px;
+	font-weight: medium;
+}
+
+.Reg20 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+/* 16px */
+.Bold16 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.Med16 {
+	font-size: 16px;
+	font-weight: medium;
+}
+
+.Reg16 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+/* 14px */
+.Bold14 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.Med14 {
+	font-size: 14px;
+	font-weight: medium;
+}
+
+.Reg14 {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+/* 12px */
+.Bold12 {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.Med12 {
+	font-size: 12px;
+	font-weight: medium;
+}
+
+.Reg12 {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+/* 10px */
+.Bold10 {
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.Med10 {
+	font-size: 10px;
+	font-weight: medium;
+}
+
+.Reg10 {
+	font-size: 10px;
+	font-weight: normal;
+}
+
+/* 8px */
+.Bold8 {
+	font-size: 8px;
+	font-weight: bold;
+}
+
+.Semi8 {
+	font-size: 8px;
+	font-weight: semibold;
+}
+
+.Reg8 {
+	font-size: 8px;
+	font-weight: normal;
+}
+
+// Mixin
+
+@mixin trsansition {
+	transition: all 0.5s ease-in-out;
+}
+
+@mixin zindex {
+	position: relative;
+	z-index: 99;
+}
+
+@mixin flex($justify, $center, $center1) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $center;
+	text-align: $center1;
+}
+
+@mixin absolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+@mixin button_primary($color, $background, $border) {
+	background: $background;
+	padding: 14px 20px;
+	color: $color;
+	border: $border;
+	font-size: calc(8px + 8 * (100vw / 1160));
+	border-radius: 57px;
+	font-family: Gilroy;
+	font-weight: 700;
+	line-height: 24px;
+	@include flex(center, center, center);
+	@include trsansition;
+
+	@media screen and (max-width: 920px) {
+		padding: 9px 14px;
+	}
+}
+
+@mixin button_secondary($color, $background, $border) {
+	background: $background;
+	padding: 12px 28px;
+	color: $color;
+	font-size: 14px;
+	border-radius: 57px;
+	font-family: Gilroy;
+	font-weight: 700;
+	border: $border;
+	line-height: 20px;
+	@include flex(center, center, center);
+	@include trsansition;
+}
