@@ -8,6 +8,7 @@
 }
 .main__header {
 	display: flex;
+	align-items: center;
 }
 .main__header-left {
 	display: flex;
@@ -16,31 +17,77 @@
 .main__header-title {
 	color: $firstTextColor-80;
 	font-family: Gilroy;
-	font-size: 60px;
+	font-size: clamp(1.875rem, 1.161rem + 3.57vw, 3.75rem);
 	font-weight: 800;
-	line-height: 68px;
+	line-height: clamp(2.125rem, 1.315rem + 4.05vw, 4.25rem);
 	text-transform: capitalize;
+	white-space: nowrap;
 }
 .main__header-subtitle {
 	color: $firstTextColor-80;
 	font-family: Gilroy;
-	font-size: 46px;
 	font-weight: 700;
-	line-height: 60px;
 	text-transform: capitalize;
+	white-space: nowrap;
 }
 .main__header-description {
-	width: 480px;
 	color: $c80;
+	max-width: 480px;
 	font-family: Gilroy;
-	font-size: 16px;
 	font-weight: 500;
-	line-height: 24px;
+	margin-top: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
+}
+.main__header-right {
+}
+.main__header-img {
 }
 .main__buttons {
 	display: flex;
+	align-items: center;
+	margin-top: clamp(1.063rem, 0.658rem + 2.02vw, 2.125rem);
 }
 .main__button-view-intro {
+	@include button_primary(
+		$firstTextColor,
+		transparent,
+		1.5px solid $firstTextColor
+	);
+	margin-right: 20px;
+
+	&:hover {
+		color: $c0;
+		background-color: $firstTextColor;
+
+		& path {
+			fill: $c0;
+			stroke: $c0;
+		}
+
+		& svg {
+			width: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
+			height: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
+			border: 2px solid $c0;
+		}
+	}
+
+	& path {
+		@include trsansition;
+	}
+
+	& svg {
+		@include trsansition;
+		padding: 2px;
+		border: 2px solid $firstTextColor;
+		border-radius: 50px;
+		width: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
+		height: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
+	}
 }
 .main__button-explore-now {
+	@include button_primary($c0, $firstTextColor, 1.5px solid $firstTextColor);
+
+	&:hover {
+		background-color: transparent;
+		color: $firstTextColor;
+	}
 }

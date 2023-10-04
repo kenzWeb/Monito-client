@@ -113,3 +113,20 @@
 	font-family: Gilroy;
 	font-weight: 700;
 }
+
+@media (max-width: 650px) {
+	.main__header-left {
+		z-index: 11;
+
+		p {
+			max-width: 250px;
+		}
+	}
+
+	.main__header-right {
+		position: absolute;
+		bottom: 0;
+		right: 20%;
+
+	}
+}

@@ -72,9 +72,9 @@ $c0: #fdfdfd;
 
 // Yellow
 
-$yellow40: #FCEED5;
-$yellow60: #F1D092;
-$yellow80: #EEC77E;
+$yellow40: #fceed5;
+$yellow60: #f1d092;
+$yellow80: #eec77e;
 
 // Background
 
@@ -82,17 +82,20 @@ $yellow80: #EEC77E;
 
 /* 46px */
 .Bold46 {
-	font-size: 46px;
+	font-size: clamp(1.438rem, 0.89rem + 2.74vw, 2.875rem);
+	line-height: clamp(1.875rem, 1.161rem + 3.57vw, 3.75rem);
 	font-weight: bold;
 }
 
 .Med46 {
-	font-size: 46px;
+	font-size: clamp(1.438rem, 0.89rem + 2.74vw, 2.875rem);
+	line-height: clamp(1.875rem, 1.161rem + 3.57vw, 3.75rem);
 	font-weight: medium;
 }
 
 .Reg46 {
-	font-size: 46px;
+	font-size: clamp(1.438rem, 0.89rem + 2.74vw, 2.875rem);
+	line-height: clamp(1.875rem, 1.161rem + 3.57vw, 3.75rem);
 	font-weight: normal;
 }
 
@@ -162,17 +165,20 @@ $yellow80: #EEC77E;
 
 /* 16px */
 .Bold16 {
-	font-size: 16px;
+	font-size: clamp(0.5rem, 0.31rem + 0.95vw, 1rem);
+	line-height: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
 	font-weight: bold;
 }
 
 .Med16 {
-	font-size: 16px;
+	font-size: clamp(0.5rem, 0.31rem + 0.95vw, 1rem);
+	line-height: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
 	font-weight: medium;
 }
 
 .Reg16 {
-	font-size: 16px;
+	font-size: clamp(0.5rem, 0.31rem + 0.95vw, 1rem);
+	line-height: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
 	font-weight: normal;
 }
 
@@ -266,32 +272,30 @@ $yellow80: #EEC77E;
 
 @mixin button_primary($color, $background, $border) {
 	background: $background;
-	padding: 14px 20px;
+	padding: clamp(0.438rem, 0.271rem + 0.83vw, 0.875rem)
+		clamp(0.875rem, 0.542rem + 1.67vw, 1.75rem);
 	color: $color;
 	border: $border;
-	font-size: calc(8px + 8 * (100vw / 1160));
+	font-size: clamp(0.5rem, 0.31rem + 0.95vw, 1rem);
 	border-radius: 57px;
 	font-family: Gilroy;
-	font-weight: 700;
-	line-height: 24px;
+	font-weight: 500;
+	line-height: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
 	@include flex(center, center, center);
 	@include trsansition;
-
-	@media screen and (max-width: 920px) {
-		padding: 9px 14px;
-	}
 }
 
 @mixin button_secondary($color, $background, $border) {
 	background: $background;
-	padding: 12px 28px;
+	padding: clamp(0.375rem, 0.232rem + 0.71vw, 0.75rem)
+		clamp(0.875rem, 0.542rem + 1.67vw, 1.75rem);
 	color: $color;
-	font-size: 14px;
+	font-size: clamp(0.438rem, 0.271rem + 0.83vw, 0.875rem);
 	border-radius: 57px;
 	font-family: Gilroy;
 	font-weight: 700;
 	border: $border;
-	line-height: 20px;
+	line-height: clamp(0.625rem, 0.387rem + 1.19vw, 1.25rem);
 	@include flex(center, center, center);
 	@include trsansition;
 }
