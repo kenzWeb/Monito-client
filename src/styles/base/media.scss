@@ -115,18 +115,30 @@
 }
 
 @media (max-width: 650px) {
+	.main {
+		text-align: center;
+	}
+
 	.main__header-left {
 		z-index: 11;
+		align-items: center;
 
 		p {
 			max-width: 250px;
 		}
 	}
 
-	.main__header-right {
-		position: absolute;
-		bottom: 0;
-		right: 20%;
-
+	.main__buttons {
+		justify-content: center;
 	}
+
+	.main__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.table_prod-wrapper {
+		flex-direction: column-reverse;
+	}
+
 }

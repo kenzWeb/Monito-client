@@ -1,48 +1,50 @@
 // Text
 
 // Heading Text
+$Bold60: clamp(1.875rem, 1.161rem + 3.57vw, 3.75rem);
+$Bold52: clamp(1.625rem, 1.006rem + 3.1vw, 3.25rem);
 
-$Bold46: 46px;
-$Med46: 46px;
-$Reg46: 46px;
 
-$Bold36: 36px;
-$Semi36: 36px;
-$Reg36: 36px;
+$Bold46: clamp(1.438rem, 0.89rem + 2.74vw, 2.875rem);
+$Med46: clamp(1.438rem, 0.89rem + 2.74vw, 2.875rem);
+$Reg46: clamp(1.438rem, 0.89rem + 2.74vw, 2.875rem);
 
-$Bold28: 28px;
-$Med28: 28px;
-$Reg28: 28px;
+$Bold36: clamp(1.125rem, 0.696rem + 2.14vw, 2.25rem);
+$Semi36: clamp(1.125rem, 0.696rem + 2.14vw, 2.25rem);
+$Reg36: clamp(1.125rem, 0.696rem + 2.14vw, 2.25rem);
 
-$Bold24: 24px;
-$Semi24: 24px;
-$Reg24: 24px;
+$Bold28: clamp(0.875rem, 0.542rem + 1.67vw, 1.75rem);
+$Med28: clamp(0.875rem, 0.542rem + 1.67vw, 1.75rem);
+$Reg28: clamp(0.875rem, 0.542rem + 1.67vw, 1.75rem);
+
+$Bold24: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
+$Semi24: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
+$Reg24: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
 
 // Body Text
 
-$Bold20: 20px;
-$Med20: 20px;
-$Reg20: 20px;
+$Bold20: clamp(0.625rem, 0.387rem + 1.19vw, 1.25rem);
+$Med20: clamp(0.625rem, 0.387rem + 1.19vw, 1.25rem);
+$Reg20: clamp(0.625rem, 0.387rem + 1.19vw, 1.25rem);
 
-$Bold16: 16px;
-$Med16: 16px;
-$Reg16: 16px;
+$Med16: clamp(0.5rem, 0.31rem + 0.95vw, 1rem);
+$Reg16: clamp(0.5rem, 0.31rem + 0.95vw, 1rem);
 
-$Bold14: 14px;
-$Med14: 14px;
-$Reg14: 14px;
+$Bold14: clamp(0.438rem, 0.271rem + 0.83vw, 0.875rem);
+$Med14: clamp(0.438rem, 0.271rem + 0.83vw, 0.875rem);
+$Reg14: clamp(0.438rem, 0.271rem + 0.83vw, 0.875rem);
 
-$Bold12: 12px;
-$Med12: 12px;
-$Reg12: 12px;
+$Bold12: clamp(0.375rem, 0.232rem + 0.71vw, 0.75rem);
+$Med12: clamp(0.375rem, 0.232rem + 0.71vw, 0.75rem);
+$Reg12: clamp(0.375rem, 0.232rem + 0.71vw, 0.75rem);
 
-$Bold10: 10px;
-$Med10: 10px;
-$Reg10: 10px;
+$Bold10: clamp(0.313rem, 0.193rem + 0.6vw, 0.625rem);
+$Med10: clamp(0.313rem, 0.193rem + 0.6vw, 0.625rem);
+$Reg10: clamp(0.313rem, 0.193rem + 0.6vw, 0.625rem);
 
-$Bold8: 8px;
-$Semi8: 8px;
-$Reg8: 8px;
+$Bold8: clamp(0.25rem, 0.155rem + 0.48vw, 0.5rem);
+$Semi8: clamp(0.25rem, 0.155rem + 0.48vw, 0.5rem);
+$Reg8: clamp(0.25rem, 0.155rem + 0.48vw, 0.5rem);
 
 // Colors
 

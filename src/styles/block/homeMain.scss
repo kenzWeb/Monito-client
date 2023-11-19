@@ -1,0 +1,69 @@
+.main {
+	margin-top: 80px;
+}
+.main__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.main__header {
+	display: flex;
+	align-items: center;
+}
+.main__header-left {
+	display: flex;
+	flex-direction: column;
+}
+.main__header-title {
+	color: $firstTextColor-80;
+	font-family: Gilroy;
+	font-size: clamp(1.875rem, 1.161rem + 3.57vw, 3.75rem);
+	font-weight: 800;
+	line-height: clamp(2.125rem, 1.315rem + 4.05vw, 4.25rem);
+	text-transform: capitalize;
+	white-space: nowrap;
+}
+.main__header-subtitle {
+	color: $firstTextColor-80;
+	font-family: Gilroy;
+	font-weight: 700;
+	text-transform: capitalize;
+	white-space: nowrap;
+}
+.main__header-description {
+	color: $c80;
+	max-width: 480px;
+	font-family: Gilroy;
+	font-weight: 500;
+	margin-top: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
+}
+.main__header-right {
+}
+.main__header-img {
+}
+.main__buttons {
+	display: flex;
+	align-items: center;
+	margin-top: clamp(1.063rem, 0.658rem + 2.02vw, 2.125rem);
+}
+.main__button-view-intro {
+	@include button_primary(
+		$firstTextColor,
+		transparent,
+		1.5px solid $firstTextColor
+	);
+	margin-right: 20px;
+
+	&:hover {
+		color: $c0;
+		background-color: $firstTextColor;
+	}
+}
+.main__button-explore-now {
+	@include button_primary($c0, $firstTextColor, 1.5px solid $firstTextColor);
+
+	&:hover {
+		background-color: transparent;
+		color: $firstTextColor;
+	}
+}

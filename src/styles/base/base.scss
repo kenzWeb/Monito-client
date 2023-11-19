@@ -1,10 +1,10 @@
+@import 'config';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 // base
 
-@import 'config';
 @import 'media';
 @import 'fonts';
 @import 'reset';
@@ -12,7 +12,9 @@
 // block
 
 @import '../block/nav';
-@import '../block/home_main.scss';
+@import '../block/homeMain.scss';
+@import '../block/products.scss';
+@import '../block/tableProd.scss';
 
 [class*='__container'] {
 	max-width: 1160px;
@@ -32,6 +34,4 @@ body {
 		#fceed5 78.33%,
 		#ffe7ba 104.24%
 	);
-
-	height: 100vh;
 }
