@@ -4,7 +4,7 @@ import {useGetProdQuery} from '../../store/api/api.js'
 
 const OurProducts = () => {
 	const {data, isError, isLoading} = useGetProdQuery()
-	console.log(data);
+	console.log(data)
 
 	return (
 		<section className='main__products'>
@@ -33,13 +33,13 @@ const OurProducts = () => {
 							<div className='products__card' key={prod.id}>
 								<img src={prod.img} alt={prod.name} className='products__img' />
 								<h2 className='products__name ml-[3px]'>{prod.name}</h2>
-								<div className='products__info'>
+								<div className='products__info items-center'>
 									<h3 className='products__gene Bold12'>
-										<span>Gene: </span>
-										{prod.gender === 'F' ? 'Female' : 'Male'}
+										<span>Product: </span>
+										{prod.product}
 									</h3>
 									<h4 className='products__age Bold12'>
-										<span>Age:</span> 02 months
+										{prod.size === 'none' ? '' : <span>Size:</span> && prod.size} 
 									</h4>
 								</div>
 								<h5 className='products__price Bold14'>{prod.price} VND</h5>
