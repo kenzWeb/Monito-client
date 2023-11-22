@@ -1,0 +1,58 @@
+.useful {
+	&__cards {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+
+		@media (max-width: 650px) {
+		grid-template-columns: repeat(1, 1fr);
+			max-width: 280px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+
+	&__card {
+		background: $white;
+		box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+		padding: 8px 8px 16px 8px;
+		height: 430px;
+
+		img {
+			border-radius: 10px;
+			margin-bottom: 16px;
+		}
+
+		@media (max-width: 966px) {
+			max-height: 300px;
+		}
+
+		@media (max-width: 650px) {
+			max-height: 365px;
+		}
+	}
+
+	&__card-title {
+		color: #fdfdfdfd;
+		background: $BlueSea;
+		width: 90px;
+		line-height: 16px;
+		border-radius: 30px;
+		margin-bottom: 10px;
+	}
+
+	&__card-subtitle {
+		color: $c100;
+		margin-bottom: 6px;
+	}
+
+	&__card-description {
+		font-weight: 200;
+		line-height: 20px;
+		color: $c80;
+	}
+}

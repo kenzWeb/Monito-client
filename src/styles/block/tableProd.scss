@@ -1,7 +1,4 @@
 .table {
-	&_prod {
-	}
-
 	&_prod-wrapper {
 		display: flex;
 		align-items: center;
@@ -43,6 +40,12 @@
 			right: 0;
 			border-radius: 99px;
 			transform: rotate(25.23deg) translate(0%, -50%);
+			@media (max-width: 990px) {
+				transform: rotate(25.23deg) translate(-25%, -40%);
+			}
+			@media (max-width: 650px) {
+				transform: rotate(25.23deg) translate(0%, -50%);
+			}
 		}
 		&::before {
 			content: '';

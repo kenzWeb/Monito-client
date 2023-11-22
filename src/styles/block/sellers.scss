@@ -1,0 +1,63 @@
+.sellers__partner {
+	margin-bottom: 80px;
+}
+
+.table {
+	&_sel {
+		background-color: #ffb775;
+		border-radius: 20px;
+	}
+
+	&_sel-wrapper {
+		display: flex;
+		align-items: center;
+		z-index: 100;
+	}
+
+	&_sel-right {
+		z-index: 3;
+	}
+
+	&_sel-left {
+		z-index: 2;
+	}
+}
+.table_sel {
+	&__container {
+		position: relative;
+		overflow: hidden;
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 705px;
+			height: 635px;
+			opacity: 0.3;
+			background: (
+				linear-gradient(103deg, #fceed5 6.43%, #fceed5 78.33%, #ffe7ba 104.24%)
+			);
+
+			bottom: 0;
+			right: 0;
+			border-radius: 99px;
+			transform: rotate(50deg) translate(70%, 10%);
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 700px;
+			height: 700px;
+			background-color: $yellow40;
+			bottom: 0;
+			left: 0;
+			border-radius: 99px;
+			transform: rotate(50.23deg) translate(-10%, 20%);
+		}
+	}
+}
+
+.main {
+	&__header-title {
+	}
+}

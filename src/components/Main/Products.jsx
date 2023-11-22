@@ -1,5 +1,6 @@
 import React from 'react'
 import {MdKeyboardArrowRight} from 'react-icons/md'
+import {TbPointFilled} from 'react-icons/tb'
 import {useGetDogsQuery} from '../../store/api/api'
 
 const DogProducts = () => {
@@ -35,6 +36,7 @@ const DogProducts = () => {
 										<span>Gene: </span>
 										{dog.gender === 'F' ? 'Female' : 'Male'}
 									</h3>
+									<TbPointFilled className='point'/>
 									<h4 className='products__age Bold12'>
 										<span>Age:</span> 02 months
 									</h4>
