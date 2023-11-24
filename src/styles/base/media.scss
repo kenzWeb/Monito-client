@@ -173,4 +173,29 @@
 	.sellers {
 		display: none;
 	}
+
+	.footer__form {
+		flex-direction: column;
+
+		form {
+			margin-top: 16px;
+			width: 100%;
+			flex-direction: column;
+
+			input {
+				width: 100%;
+			}
+
+			button {
+				margin-top: 12px;
+				width: 100%;
+			}
+		}
+	}
+
+	.footer__form-title {
+		width: 100%;
+		text-align: center;
+	}
+
 }

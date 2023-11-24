@@ -4,7 +4,6 @@
 $Bold60: clamp(1.875rem, 1.161rem + 3.57vw, 3.75rem);
 $Bold52: clamp(1.625rem, 1.006rem + 3.1vw, 3.25rem);
 
-
 $Bold46: clamp(1.438rem, 0.89rem + 2.74vw, 2.875rem);
 $Med46: clamp(1.438rem, 0.89rem + 2.74vw, 2.875rem);
 $Reg46: clamp(1.438rem, 0.89rem + 2.74vw, 2.875rem);
@@ -103,49 +102,49 @@ $yellow80: #eec77e;
 
 /* 36px */
 .Bold36 {
-	font-size: 36px;
+	font-size: clamp(1.125rem, 0.696rem + 2.14vw, 2.25rem);
 	font-weight: bold;
 }
 
 .Semi36 {
-	font-size: 36px;
+	font-size: clamp(1.125rem, 0.696rem + 2.14vw, 2.25rem);
 	font-weight: semibold;
 }
 
 .Reg36 {
-	font-size: 36px;
+	font-size: clamp(1.125rem, 0.696rem + 2.14vw, 2.25rem);
 	font-weight: normal;
 }
 
 /* 28px */
 .Bold28 {
-	font-size: 28px;
+	font-size: clamp(0.875rem, 0.542rem + 1.67vw, 1.75rem);
 	font-weight: bold;
 }
 
 .Med28 {
-	font-size: 28px;
+	font-size: clamp(0.875rem, 0.542rem + 1.67vw, 1.75rem);
 	font-weight: medium;
 }
 
 .Reg28 {
-	font-size: 28px;
+	font-size: clamp(0.875rem, 0.542rem + 1.67vw, 1.75rem);
 	font-weight: normal;
 }
 
 /* 24px */
 .Bold24 {
-	font-size: 24px;
+	font-size: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
 	font-weight: bold;
 }
 
 .Semi24 {
-	font-size: 24px;
+	font-size: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
 	font-weight: semibold;
 }
 
 .Reg24 {
-	font-size: 24px;
+	font-size: clamp(0.75rem, 0.464rem + 1.43vw, 1.5rem);
 	font-weight: normal;
 }
 
@@ -186,17 +185,17 @@ $yellow80: #eec77e;
 
 /* 14px */
 .Bold14 {
-	font-size: 14px;
+	font-size: clamp(0.438rem, 0.272rem + 0.83vw, 0.875rem);
 	font-weight: bold;
 }
 
 .Med14 {
-	font-size: 14px;
+	font-size: clamp(0.438rem, 0.272rem + 0.83vw, 0.875rem);
 	font-weight: medium;
 }
 
 .Reg14 {
-	font-size: 14px;
+	font-size: clamp(0.438rem, 0.272rem + 0.83vw, 0.875rem);
 	font-weight: normal;
 }
 

@@ -5,10 +5,8 @@
 
 // base
 
-@import 'media';
 @import 'fonts';
 @import 'reset';
-
 // block
 
 @import '../block/nav';
@@ -17,7 +15,9 @@
 @import '../block/tableProd.scss';
 @import '../block/sellers.scss';
 @import '../block/useful.scss';
+@import '../block/footer.scss';
 
+@import 'media';
 [class*='__container'] {
 	max-width: 1160px;
 	margin: 0 auto;

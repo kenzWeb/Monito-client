@@ -3,7 +3,7 @@ import { MdKeyboardArrowRight } from 'react-icons/md'
 
 export default function Useful() {
 	return (
-		<section className='useful'>
+		<section className='useful mb-[60px]'>
 			<div className='useful__container'>
 				<div className='mt-[60px]'>
 					<h1 className='text-[#000] text-[16px]'>You already know ?</h1>

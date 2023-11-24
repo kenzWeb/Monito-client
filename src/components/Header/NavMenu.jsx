@@ -9,8 +9,6 @@ const NavMenu = () => {
 	const {t, i18n} = useTranslation()
 	const [burger, setBurger] = useState(false)
 	const [searchForm, setSearchForm] = useState(false)
-	const pageHeight = document.documentElement.scrollHeight
-	const pageWidth = document.documentElement.scrollWidth
 
 	useEffect(() => {
 		i18n.changeLanguage(langCheck)
