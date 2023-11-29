@@ -9,7 +9,7 @@ function Footer() {
 
 	useEffect(() => {
 		i18n.changeLanguage(langCheck)
-	}, [langCheck])
+	}, [i18n, langCheck])
 
 	const {register, handleSubmit} = useForm()
 

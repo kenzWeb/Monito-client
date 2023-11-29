@@ -37,3 +37,11 @@ body {
 		#ffe7ba 104.24%
 	);
 }
+
+.category-item.none .sub-category-menu {
+	display: none;
+}
+
+.category-item.none .arrow-icon {
+	transform: rotate(180deg);
+}

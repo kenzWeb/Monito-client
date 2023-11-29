@@ -12,7 +12,7 @@ const Main = () => {
 					mtt={'4'}
 					mtst={'24'}
 					mtd={'34'}
-					lhSubtitle={'60'}
+
 					lhDesc={'24'}
 					justifyContent={'start'}
 				/>
