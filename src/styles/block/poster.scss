@@ -1,0 +1,91 @@
+.poster {
+	margin-top: 9px;
+	&__container {
+	}
+
+	&__wrapper {
+		position: relative;
+		width: 100%;
+		display: flex;
+		border-radius: 20px;
+		overflow: hidden;
+		background: linear-gradient(
+			103deg,
+			#fceed5 6.43%,
+			#fceed5 78.33%,
+			#ffe7ba 104.24%
+		);
+		padding: 50px;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 600px;
+			height: 600px;
+			bottom: 0;
+			right: 0;
+			border-radius: 99px;
+			background-color: $firstTextColor-80;
+			transform: rotate(-160.219deg) translateX(-20%);
+		}
+	}
+
+	&__left {
+		width: 55%;
+		z-index: 5;
+		bottom: 0;
+		img {
+			position: absolute;
+			width: 55%;
+			bottom: 0;
+		}
+	}
+
+	&__right {
+		text-align: right;
+		width: 45%;
+		z-index: 5;
+	}
+
+	&__title {
+		color: $c0;
+	}
+
+	&__subtitle {
+		color: $c0;
+		margin-bottom: 8px;
+	}
+
+	&__description {
+		color: $c0;
+		margin-bottom: 25px;
+	}
+
+	&__buttons {
+		color: $c0;
+		display: flex;
+		justify-content: flex-end;
+		border-radius: 57px;
+	}
+
+	&__btn-border {
+		@include button_primary($c0, transparent, 1.5px solid $c0);
+		@apply Med16;
+		margin-right: 28px;
+
+		&:hover {
+			background-color: $c0;
+			color: $c100;
+		}
+	}
+
+	&__btn {
+		@include button_primary($c100, $c0, 1.5px solid $c0);
+		@apply Med16;
+		&:hover {
+			background-color: transparent;
+			color: $c0;
+		}
+	}
+}

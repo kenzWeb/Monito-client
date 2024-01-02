@@ -1,0 +1,21 @@
+.category {
+	&__main {
+		margin-top: 28px;
+	}
+
+	&__main-header {
+		display: flex;
+	}
+
+	&__header-adapter {
+		display: flex;
+		align-items: center;
+		@apply Med14;
+		color: $c60;
+		margin-right: 5px;
+
+		& span {
+			margin-right: 5px;
+		}
+	}
+}

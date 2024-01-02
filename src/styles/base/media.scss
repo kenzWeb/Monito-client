@@ -149,6 +149,28 @@
 	.nested {
 		display: none;
 	}
+
+	.poster {
+		&__wrapper {
+			flex-direction: column;
+			align-items: center;
+
+			&::after {
+				width: 400px;
+				height: 400px;
+			}
+		}
+
+		&__left {
+			img {
+
+			}
+		}
+		
+		&__right {
+			width: 100%;
+		}
+	}
 }
 
 .drop__form {

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{js,jsx,ts,tsx}'],
+	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		colors: {
 			primary_color_dark_blue: '#003459',
@@ -9,8 +9,8 @@ module.exports = {
 			neutral_color_0: '#FDFDFD',
 		},
 		fontFamily: {
-      Gilroy: ['Gilroy']
-    }
+			Gilroy: ['Gilroy'],
+		},
 	},
 	plugins: [],
 }

@@ -1,8 +1,14 @@
 import {motion} from 'framer-motion'
 import React, {useEffect, useState} from 'react'
 import {useTranslation} from 'react-i18next'
+import {FiSearch} from 'react-icons/fi'
 import {IoMdArrowDropup} from 'react-icons/io'
+import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
+import {Link} from 'react-router-dom'
 import '../../styles/base/base.scss'
+import useGetDogs from '../hooks/useGetDogs'
+import Hlogo from '../miniapp/Hlogo'
+import Hmenu from '../miniapp/Hmenu'
 import SearchDrop from './SearchDrop'
 
 const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
@@ -11,6 +17,8 @@ const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
 	const {t, i18n} = useTranslation()
 	const [burger, setBurger] = useState(false)
 	const [searchForm, setSearchForm] = useState(false)
+
+	const {popular, large, small} = useGetDogs()
 
 	useEffect(() => {
 		i18n.changeLanguage(langCheck)
@@ -30,7 +38,6 @@ const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
 	const subDropdown = (e) => {
 		const categoryItem = e.currentTarget
 		categoryItem.classList.toggle('none')
-		console.log(categoryItem)
 	}
 
 	return (
@@ -41,15 +48,17 @@ const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
 					className='header__burger'
 					onClick={() => setBurger((prev) => !prev)}
 				>
-					<img className='cursor-pointer' src='img/icons/h_menu.svg' alt='' />
+					<Hmenu />
 				</motion.div>
 				<motion.div className='header_logo'>
-					<img src='img/logos/hlogo.svg' alt='logo' />
+					<Hlogo />
 				</motion.div>
 				<nav className={`header__navigation ${burger ? 'vis' : ''}`}>
 					<ul className='nav_list flex items-center gap-[48px] text-primary_color_dark_blue font-bold leading-[24px]'>
 						<li className='nav_link'>
-							<a href='Home'>{t('nav_home')}</a>
+							<Link to='/' href='Home'>
+								{t('nav_home')}
+							</Link>
 						</li>
 						<li className='nav_link flex items-start flex-col'>
 							<div className='flex items-center mb-2'>
@@ -79,42 +88,17 @@ const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
 
 												<div className='sub-category-menu'>
 													<ul className='sub-category-list'>
-														<li>
-															<a href='/'>Yorkshire Terrier</a>
-														</li>
-														<li>
-															<a href='/'>Pug</a>
-														</li>
-														<li>
-															<a href='/'>Cocker Spaniel</a>
-														</li>
-														<li>
-															<a href='/'>Jack Russell Terrier</a>
-														</li>
-														<li>
-															<a href='/'>Beagle</a>
-														</li>
-														<li>
-															<a href='/'>Husky</a>
-														</li>
-														<li>
-															<a href='/'>Samoyed</a>
-														</li>
-														<li>
-															<a href='/'>Labrador</a>
-														</li>
-														<li>
-															<a href='/'>Tosa</a>
-														</li>
-														<li>
-															<a href='/'>Dachshund</a>
-														</li>
-														<li>
-															<a href='/'>French Bulldog</a>
-														</li>
-														<li>
-															<a href='/'>Chihuahua</a>
-														</li>
+														{popular &&
+															popular.map((dog, i) => (
+																<li key={i}>
+																	<Link
+																		to={`/category/${dog.name}`}
+																		href='Akita'
+																	>
+																		{dog.name}
+																	</Link>
+																</li>
+															))}
 													</ul>
 												</div>
 											</li>
@@ -129,24 +113,17 @@ const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
 												</div>
 												<div className='sub-category-menu'>
 													<ul className='sub-category-list'>
-														<li>
-															<a href='/'>Akita</a>
-														</li>
-														<li>
-															<a href='/'>Alaskan Malamute</a>
-														</li>
-														<li>
-															<a href='/'>Bernese Moutain</a>
-														</li>
-														<li>
-															<a href='/'>Bloodhound</a>
-														</li>
-														<li>
-															<a href='/'>Bullmastiff</a>
-														</li>
-														<li>
-															<a href='/'>Cane Corso</a>
-														</li>
+														{large &&
+															large.map((dog, i) => (
+																<li key={i}>
+																	<Link
+																		to={`/category/${dog.name}`}
+																		href='Akita'
+																	>
+																		{dog.name}
+																	</Link>
+																</li>
+															))}
 													</ul>
 												</div>
 											</li>
@@ -161,24 +138,17 @@ const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
 												</div>
 												<div className='sub-category-menu'>
 													<ul className='sub-category-list'>
-														<li>
-															<a href='/'>Beagle</a>
-														</li>
-														<li>
-															<a href='/'>Boston Terrier</a>
-														</li>
-														<li>
-															<a href='/'>Calm Terrier</a>
-														</li>
-														<li>
-															<a href='/'>Chihuahua</a>
-														</li>
-														<li>
-															<a href='/'>Cocker Spaniel</a>
-														</li>
-														<li>
-															<a href='/'>Cane Corso</a>
-														</li>
+														{small &&
+															small.map((dog, i) => (
+																<li key={i}>
+																	<Link
+																		to={`/category/${dog.name}`}
+																		href='Akita'
+																	>
+																		{dog.name}
+																	</Link>
+																</li>
+															))}
 													</ul>
 												</div>
 											</li>
@@ -188,19 +158,21 @@ const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
 							)}
 						</li>
 						<li className='nav_link'>
-							<a href='About'>{t('nav_about')}</a>
+							<Link to='/about' href='About'>
+								{t('nav_about')}
+							</Link>
 						</li>
 						<li className='nav_link'>
-							<a href='Contact'>{t('nav_contact')}</a>
+							<Link to='/' href='Contact'>
+								{t('nav_contact')}
+							</Link>
 						</li>
 					</ul>
 				</nav>
 				<motion.div className='header__from_info flex items-center'>
 					<form className='header__form flex items-center mr-[14px]'>
-						<img
+						<FiSearch
 							className='header__form_img'
-							src='img/icons/h_search.svg'
-							alt=''
 							onClick={() => setSearchForm((prev) => !prev)}
 						/>
 						<input
@@ -225,9 +197,7 @@ const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
 						<h2 href='lang' className='lang__title Med16'>
 							{langCheck}
 						</h2>
-						<img
-							src='img/icons/Caret_Down_SM.svg'
-							alt=''
+						<MdOutlineKeyboardArrowDown
 							className='lang__button cursor-pointer'
 							onClick={toggleLangMenu}
 						/>

@@ -15,7 +15,22 @@ export const api = createApi({
 		getDogs: builder.query({
 			query: () => 'dog',
 		}),
+		getPopular: builder.query({
+			query: () => 'dog/popular',
+		}),
+		getLarge: builder.query({
+			query: () => 'dog/large',
+		}),
+		getSmall: builder.query({
+			query: () => 'dog/small',
+		}),
 	}),
 })
 
-export const {useGetDogsQuery, useGetProdQuery} = api
+export const {
+	useGetDogsQuery,
+	useGetProdQuery,
+	useGetPopularQuery,
+	useGetLargeQuery,
+	useGetSmallQuery,
+} = api
