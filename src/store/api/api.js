@@ -1,5 +1,5 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
-const baseUrl = 'https://monito-server-production.up.railway.app/api/v1/'
+const baseUrl = 'https://monito-server.up.railway.app/api/v1/'
 
 export const api = createApi({
 	reducerPath: 'api',

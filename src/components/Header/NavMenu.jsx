@@ -4,21 +4,25 @@ import {useTranslation} from 'react-i18next'
 import {FiSearch} from 'react-icons/fi'
 import {IoMdArrowDropup} from 'react-icons/io'
 import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
+import {useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
+import {useGetDogsQuery} from '../../store/api/api'
 import '../../styles/base/base.scss'
+import {setFilterName, setFilterSearch} from '../features/slices/filterSlice'
 import useGetDogs from '../hooks/useGetDogs'
 import Hlogo from '../miniapp/Hlogo'
 import Hmenu from '../miniapp/Hmenu'
 import SearchDrop from './SearchDrop'
 
 const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
+	const dispatch = useDispatch()
 	const [langMenu, setLangMenu] = useState(false)
 	let [langCheck, setLangCheck] = useState('USA')
 	const {t, i18n} = useTranslation()
 	const [burger, setBurger] = useState(false)
 	const [searchForm, setSearchForm] = useState(false)
-
 	const {popular, large, small} = useGetDogs()
+	const {data: dogs, error, isLoading} = useGetDogsQuery()
 
 	useEffect(() => {
 		i18n.changeLanguage(langCheck)
@@ -178,6 +182,10 @@ const NavMenu = ({toggleSubCategoryMenu, subCategoryMenu}) => {
 						<input
 							type='text'
 							className='header__input'
+							onChange={(e) => {
+								dispatch(setFilterName(e.target.value))
+								dispatch(setFilterSearch(dogs))
+							}}
 							placeholder={t('nav_input')}
 						/>
 					</form>

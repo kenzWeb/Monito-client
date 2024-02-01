@@ -1,0 +1,30 @@
+.dogs {
+	width: 100%;
+	&__wrapepr {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+
+	&__header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		&-title {
+			margin-right: 14px;
+			line-height: 36px;
+		}
+
+		&-subtitle {
+			color: $c60;
+			line-height: 20px;
+		}
+	}
+
+	&__content {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

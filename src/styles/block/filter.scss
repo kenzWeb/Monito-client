@@ -1,0 +1,121 @@
+.filter {
+	&__container {
+		padding: 0;
+	}
+
+	&__title {
+		margin-bottom: 14px;
+		@apply Bold24;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		border-bottom: 1px solid $c10;
+		padding-bottom: 16px;
+	}
+
+	&__subtitle {
+		color: $c100;
+		margin-top: 10px;
+		@apply Bold16;
+	}
+
+	&__item-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		margin-top: 10px;
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&-checkbox {
+			appearance: none;
+			position: absolute;
+
+			&:checked .filter__checkbox-title::before {
+				opacity: 0;
+			}
+
+			&:checked + .filter__wrapper-content > .filter__checkbox-title::after {
+				opacity: 1;
+			}
+		}
+
+		&-content {
+			padding-left: 15px;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__checkbox-title {
+		margin-left: 10px;
+		color: $c100;
+		@apply Med14;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			border: 1px solid $c20;
+			border-radius: 4px;
+			top: 12%;
+			left: 0;
+			z-index: 1;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 16px;
+			height: 16px;
+			background: url('../../../public/img/logos/u_check.svg') no-repeat;
+			opacity: 0;
+			background-size: 16px 16px;
+			position: absolute;
+			top: 12%;
+			left: 0;
+			z-index: 2;
+		}
+	}
+
+	&__frame {
+		margin-left: 10px;
+		width: 15px;
+		height: 15px;
+		border-radius: 10px;
+	}
+}
+.red {
+	background-color: #ff564f;
+}
+.apricot {
+	background-color: #ffb672;
+}
+.black {
+	background-color: $c100;
+}
+.blackwhite {
+	background: linear-gradient(
+		90deg,
+		#242b33 0%,
+		#242b33 52.59%,
+		#d7d7d7 52.6%,
+		#d2d2d2 100%
+	);
+}
+.silver {
+	background-color: #cecece;
+}
+.tan {
+	background-color: #fff7ce;
+}
+.price-input {
+}

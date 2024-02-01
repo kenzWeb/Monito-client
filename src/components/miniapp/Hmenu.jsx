@@ -13,9 +13,9 @@ function Hmenu() {
 				<path
 					d='M1.6665 15.1667H20.3332M1.6665 8.50001H20.3332M1.6665 1.83334H20.3332'
 					stroke='#00171F'
-					stroke-width='2'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeWidth='2'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 			</svg>
 		</>

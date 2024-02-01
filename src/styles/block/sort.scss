@@ -1,0 +1,43 @@
+.sort {
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__button {
+		padding: 8px 20px;
+		align-items: center;
+		border-radius: 20px;
+		border: 1px solid $c40;
+		color: $c40;
+	}
+
+	&__items {
+
+		padding: 10px 12px;
+		border-radius: 16px;
+		max-height: 0;
+		border: 1px solid $c20;
+		background: #fff;
+		box-shadow: 0px 4px 24px -2px rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-direction: column;
+		transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+		opacity: 0;
+		gap: 10px;
+		width: 100%;
+		line-height: 20px;
+		margin-top: 5px;
+
+		&.show {
+			opacity: 1;
+			max-height: 300px;
+		}
+	}
+
+	&__item {
+		color: $c60;
+		cursor: pointer;
+	}
+}

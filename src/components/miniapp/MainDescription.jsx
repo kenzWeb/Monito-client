@@ -23,8 +23,6 @@ function MainDescription({
 		mtd: `${mtd}px`,
 		justifyContent: `${justifyContent}`,
 	}
-
-	console.log(styles.justifyContent)
 	return (
 		<div className='main__header p-[10px]'>
 			<div className='main__header-left'>

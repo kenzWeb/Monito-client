@@ -6,7 +6,6 @@ import {useGetProdQuery} from '../../../store/api/api.js'
 
 const OurProducts = () => {
 	const {data, isError, isLoading} = useGetProdQuery()
-	console.log(data)
 
 	return (
 		<section className='main__products'>
