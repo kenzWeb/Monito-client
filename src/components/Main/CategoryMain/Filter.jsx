@@ -1,31 +1,24 @@
 import React, {useEffect, useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {
-	setFilterGender,
 	setFilterColor,
+	setFilterGender,
+	setFilterSize,
 } from '../../features/slices/filterSlice'
 
 export default function Filter() {
-	const [checkedValue, setCheckedValue] = useState({
-		gender: [],
-		color: [],
-		breed: [],
-	})
+	const [checkedGender, setCheckedGender] = useState([])
+	const [checkedColor, setCheckedColor] = useState([])
+	const [checkedSize, setCheckedSize] = useState([])
 	const dispatch = useDispatch()
 
 	const handleCheckGender = (e) => {
 		let {value, checked} = e.target
 
 		if (checked) {
-			setCheckedValue((prev) => ({gender: [...prev.gender, value]}))
-		} else if (checkedValue.gender.includes(value)) {
-			setCheckedValue((prev) => ({
-				gender: prev.gender.filter((item) => item !== value),
-			}))
+			setCheckedGender((prev) => [...prev, value])
 		} else {
-			setCheckedValue((prev) => {
-				return {gender: [...prev.gender.filter((skill) => skill === value)]}
-			})
+			setCheckedGender((prev) => prev.filter((item) => item !== value))
 		}
 	}
 
@@ -33,25 +26,33 @@ export default function Filter() {
 		let {value, checked} = e.target
 
 		if (checked) {
-			setCheckedValue((prev) => ({color: [...prev.color, value]}))
-		} else if (checkedValue.color.includes(value)) {
-			setCheckedValue((prev) => ({
-				color: prev.color.filter((item) => item !== value),
-			}))
+			setCheckedColor((prev) => [...prev, value])
 		} else {
-			setCheckedValue((prev) => {
-				return {color: [...prev.color.filter((skill) => skill === value)]}
-			})
+			setCheckedColor((prev) => prev.filter((item) => item !== value))
 		}
 	}
 
-	console.log(checkedValue)
+	const handleCheckSize = (e) => {
+		let {value, checked} = e.target
+
+		if (checked) {
+			setCheckedSize((prev) => [...prev, value])
+		} else {
+			setCheckedSize((prev) => prev.filter((item) => item !== value))
+		}
+	}
 
 	useEffect(() => {
-		if (checkedValue) {
-			dispatch(setFilterGender(checkedValue))
-		}
-	}, [checkedValue, dispatch])
+		dispatch(setFilterGender({gender: checkedGender}))
+	}, [checkedGender, dispatch])
+
+	useEffect(() => {
+		dispatch(setFilterColor({color: checkedColor}))
+	}, [checkedColor, dispatch])
+
+	useEffect(() => {
+		dispatch(setFilterSize({size: checkedSize}))
+	}, [checkedSize, dispatch])
 
 	return (
 		<section className='filter'>
@@ -193,13 +194,13 @@ export default function Filter() {
 					</div>
 				</div>
 				<div className='filter__item'>
-					<div className='filter__subtitle'>breed</div>
+					<div className='filter__subtitle'>Size</div>
 					<div className='filter__item-wrapper'>
 						<div className='filter__wrapper'>
 							<input
 								type='checkbox'
-								// onChange={()}
-								value='small'
+								onChange={handleCheckSize}
+								value='Small'
 								id='small'
 								className='filter__wrapper-checkbox'
 							/>
@@ -212,8 +213,8 @@ export default function Filter() {
 						<div className='filter__wrapper'>
 							<input
 								type='checkbox'
-								// onChange={()}
-								value='medium'
+								onChange={handleCheckSize}
+								value='Medium'
 								id='medium'
 								className='filter__wrapper-checkbox'
 							/>
@@ -226,8 +227,8 @@ export default function Filter() {
 						<div className='filter__wrapper'>
 							<input
 								type='checkbox'
-								// onChange={()}
-								value='large'
+								onChange={handleCheckSize}
+								value='Large'
 								id='large'
 								className='filter__wrapper-checkbox'
 							/>
